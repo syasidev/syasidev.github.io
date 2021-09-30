@@ -2,15 +2,24 @@
 <html>
   <head>
     <script>
+      function pickCalc(){
+        var pickupRate = document.getElementById("pickupRate").value;
+        var executeCount = document.getElementById("executeCount").value;
+        var successRate = (1 - (1 - pickupRate/100)**executeCount) * 100;
+        
+        document.getElementById("result").innerHTML = "연차내 픽업을 얻을 확률은 " + successRate + "% 입니다";
+      }
     </script>
   </head>
   <body>
     <h2>픽업계산기</h2>
     <hr>
     <div>
-      픽업 확률 : <input type="text" id="pickupRate"/> %
-      연차 횟수 : <input type="text" id="executeCount"/> 회
-      연차내에 얻을 확률은 
+      픽업 확률 : <input type="number" step="0.001" id="pickupRate" onchange="pickCalc"/> %
+      <br>
+      연차 횟수 : <input type="number" id="executeCount" onchange="pickCalc"/> 회
+      <br>
+      <div id="result"></div>
     </div>
   </body>
 </html>
