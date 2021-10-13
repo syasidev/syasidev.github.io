@@ -21,7 +21,7 @@
         var text;
         var color;
         
-        for(var j=0; i < sortList.length ; j++){
+        for(var j=0; j < sortList.length ; j++){
            if(sortList[j] < 10){
               color = 'green';
            } else if(sortList[j] < 20){
@@ -34,7 +34,7 @@
               color = 'red';
            }
           
-           text += "<font size='20px' color='" + color + "'>";
+           text += "<font size='20px' color='" + color + "'>" + sortList[j] + "</font>";
         }
         
         document.getElementById("result").innerHTML = text;
