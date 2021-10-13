@@ -11,10 +11,11 @@
      <h2>QR코드 생성기</h2>
      <hr>
      <div>
-        <button type="button" onclick="lotteGene()" style="margin-bottom:20px;">생성</button>
-        <br>
-        <div id="result"></div>
+        사이즈 <input id="size" type="number" value="200"></input>
+        데이터 <input id="data" type="text" value="https://syasidev.github.io/"></input>
+        <button type="button" onclick="qrGene()" style="margin-bottom:20px;">생성</button>
      </div>
+     <div id="result"></div>
      <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
 </html>
