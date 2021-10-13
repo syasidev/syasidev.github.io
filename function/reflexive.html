@@ -35,9 +35,9 @@
                   addText = '지금 딴 생각했죠?';
                 }
                   
-                boxText.innerHTML = resultTime+'ms 입니다! '+addText;
+                boxText.innerHTML = resultTime+'ms 입니다! '+addText + '<br>클릭해서 다시하기';
               } else {
-                boxText.innerHTML = '일찍 눌렀어요!';
+                boxText.innerHTML = '일찍 눌렀어요!' + '<br>클릭해서 다시하기';
                 clickFlag = true;
               }
               this.status = 'ready';
