@@ -11,8 +11,8 @@
       function getOption(){
          var getWidth = 500;
          var getHeight = 300;
-         var getLeft = (document.body.offsetWidth / 2) - getWidth;
-         var getTop = (document.body.offsetHeight / 2) - getHeight;
+         var getLeft = (window.screen.width / 2) - getWidth;
+         var getTop = (window.screen.height / 2) - getHeight;
          getLeft += window.screenLeft;
         
          return 'width='+getWidth+',height='+getHeight+',left='+getLeft+',top='+getTop;
