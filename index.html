@@ -16,13 +16,14 @@
     </script>
     <style>
       .container{ gap: 1px; }
-      .item{ float: left; text-align: center; vertical-align: middle; }
+      .item{ float: left; text-align: center; display: table; }
+      .rows{ color: white; display: table-cell; vertical-align: middle; }
       .size-mini{ width: 100px; height: 100px; }
     </style>
   </head>
   <body>
      <div class="container">
-        <div class="item size-mini" onclick="popupOpen('pickup',500,300)" style="background-color:#15006b;"><span style="color:white;">픽업계산기</span></div>
+        <div class="item size-mini" onclick="popupOpen('pickup',500,300)" style="background-color:#15006b;"><span class="rows">픽업계산기</span></div>
      </div>
   </body>
 </html>
