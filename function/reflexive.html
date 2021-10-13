@@ -20,7 +20,23 @@
               this.endTime = new Date();
               this.status = 'finish';
               if(clickFlag){
-                boxText.innerHTML = (endTime-startTime)+'ms 입니다!';
+                var resultTime = (endTime-startTime);
+                var addText = '';
+                if(resultTime < 200){
+                  addText = '개빨라요!';
+                } else if(resultTime < 250){
+                  addText = '쪼~금 빠르네요!';
+                } else if(resultTime < 300){
+                  addText = '그냥 평범해요';
+                } else if(resultTime < 350){
+                  addText = '느려요';
+                } else if(resultTime < 400){
+                  addText = '너~무 느려요';
+                } else {
+                  addText = '지금 딴 생각했죠?';
+                }
+                  
+                boxText.innerHTML = resultTime+'ms 입니다! '+addText;
               } else {
                 boxText.innerHTML = '일찍 눌렀어요!';
                 clickFlag = true;
