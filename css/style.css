@@ -1,10 +1,10 @@
  /* Main */
 .container{ gap: 1px; }
-.item{ float: left; text-align: center; display: table; cursor: pointer; }
+.item{ float: left; text-align: center; display: table; cursor: pointer; margin: 10px; }
 .row{ color: white; display: table-cell; vertical-align: middle; }
       
-.size-mini{ width: 100px; height: 100px; }
-.size-big{ width: 200px; height: 200px; }
+.size-mini{ width: 150px; height: 150px; }
+.size-big{ width: 300px; height: 300px; }
 
 /* Contents */
 .closeBtn{ background-color: red; color: white; text-align: center; position: fixed; bottom: 0px; width: 100%; cursor: pointer; right: 0px; }
