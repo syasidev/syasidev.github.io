@@ -18,7 +18,6 @@
               timewaiting();
            } else if(this.status == 'start') {
               this.endTime = new Date();
-              this.status = 'finish';
               if(clickFlag){
                 var resultTime = (endTime-startTime);
                 var addText = '';
@@ -41,10 +40,7 @@
                 boxText.innerHTML = '일찍 눌렀어요!';
                 clickFlag = true;
               }
-              boxText.style.backgroundColor = '#527ede';
-           } else if(this.status == 'finish') {
               this.status = 'ready';
-              boxText.innerHTML = '시작';
               boxText.style.backgroundColor = '#bec944';
            }
       }
