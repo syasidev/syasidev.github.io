@@ -7,11 +7,10 @@
       }
       
       function getOption(width, height){
-         var left = (window.screen.width / 2) - width / 2;
+         var left = (window.screen.width / 2) - ( width / 2 ) + window.screenLeft;
          var top = (window.screen.height / 2) - height;
-         left += window.screenLeft;
         
-         return 'width='+width+',height='+height+',left='+left+',top='+top+',scrollbars=no,resizeable=no,menubar=no,toolbar=no,location=no,directories=no,status=no,fullscreen=no';
+         return 'width='+width+',height='+height+',left='+left+',top='+top+',scrollbars=no,resizeable=no,location=no,status=no';
       }
     </script>
     <style>
