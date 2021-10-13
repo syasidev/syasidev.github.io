@@ -4,6 +4,8 @@
     <link href="/css/style.css" rel="stylesheet">
     <script>
        var status = 'ready';
+       var startTime;
+       var endTime;
        
        function btnClick(){
            var boxText = document.getElementById("boxText");
@@ -12,9 +14,11 @@
               this.status = 'start';
               boxText.innerHTML = '녹색일때 클릭!';
               boxText.style.backgroundColor = '#0ac263';
+              this.startTime = new Date();
            } else if(this.status == 'start') {
+              this.endTime = new Date();
               this.status = 'finish';
-              boxText.innerHTML = '1ms 입니다';
+              boxText.innerHTML = (endTime-startTime)+'ms 입니다!';
               boxText.style.backgroundColor = '#527ede';
            } else if(this.status == 'finish') {
               this.status = 'ready';
