@@ -12,7 +12,7 @@
          var getWidth = 500;
          var getHeight = 300;
          var getLeft = (document.body.offsetWidth / 2) - (getWidth / 2);
-         var getTop = (window.screen.height / 2) - (getHeight / 2);
+         var getTop = (window.screen.height / 2) - (getHeight / 2) - getHeight;
         
          return 'width='+getWidth+'px,height='+getHeight+'px,left='+getLeft+'px,top='+getTop+'px';
       }
