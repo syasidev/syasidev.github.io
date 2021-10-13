@@ -34,7 +34,7 @@
               color = 'red';
            }
           
-           text += "<font size='20px' color='" + color + "' style='margin-right:20px;'>" + sortList[j] + "</font>";
+           text += "<font size='20px' color='" + color + "' style='margin-right:20px; border: 1px solid;'>" + sortList[j] + "</font>";
         }
         
         document.getElementById("result").innerHTML = text;
@@ -68,7 +68,7 @@
      <h2>로또생성기</h2>
      <hr>
      <div>
-        <button type="button" onclick="lotteGene()">생성</button>
+        <button type="button" onclick="lotteGene()" style="margin-bottom:20px;">생성</button>
         <br>
         <div id="result"></div>
      </div>
