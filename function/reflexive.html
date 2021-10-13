@@ -11,12 +11,15 @@
            if(this.status == 'ready'){
               this.status = 'start';
               boxText.innerHTML = '녹색일때 클릭!';
+              boxText.style.backgroundColor = '#0ac263';
            } else if(this.status == 'start') {
               this.status = 'finish';
               boxText.innerHTML = '1ms 입니다';
+              boxText.style.backgroundColor = '#527ede';
            } else if(this.status == 'finish') {
               this.status = 'ready';
               boxText.innerHTML = '시작';
+              boxText.style.backgroundColor = '#bec944';
            }
        }
     </script>
