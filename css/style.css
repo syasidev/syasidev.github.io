@@ -1,1 +1,9 @@
+ /* Main */
+.container{ gap: 1px; }
+.item{ float: left; text-align: center; display: table; cursor: pointer; }
+.row{ color: white; display: table-cell; vertical-align: middle; }
+      
+.size-mini{ width: 100px; height: 100px; }
+.size-big{ width: 200px; height: 200px; }
 
+/* Contents */
