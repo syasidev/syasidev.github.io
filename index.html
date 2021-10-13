@@ -17,14 +17,17 @@
     <style>
       .container{
         display : grid;
-        grid-template-columns: 50px 50px 50px;
-        grid-template-rows: 50px 50px;
+        grid-template : 100px;
+        gap: 1px;
+      }
+      .item{
+        color : white;
       }
     </style>
   </head>
   <body>
      <div class="container">
-        <div onclick="popupOpen('pickup',500,300)" style="background-color:#333333;">[픽업계산기]</div>
+        <div class="item" onclick="popupOpen('pickup',500,300)" style="background-color:#42cef5;">[픽업계산기]</div>
      </div>
   </body>
 </html>
