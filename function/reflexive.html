@@ -3,12 +3,7 @@
   <head>
     <link href="/css/style.css" rel="stylesheet">
     <script>
-       var status = '';
-      
-       window.open(function(){
-          this.status = 'ready';
-          document.getElementById("boxText").innerHTML = '시작';
-       });
+       var status = 'ready';
        
        function btnClick(){
            var boxText = document.getElementById("boxText");
@@ -34,7 +29,7 @@
      <h2>반응속도 테스트</h2>
      <hr>
      <div class="box">
-        <div id="boxText" class="box-item" onclick="btnClick()"></div>
+        <div id="boxText" class="box-item" onclick="btnClick()">시작</div>
      </div>
      <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
