@@ -4,6 +4,14 @@
     <link href="/css/style.css" rel="stylesheet">
     <script>
       function qrGene(){
+        var apiAddress = 'https://api.qrserver.com/v1/create-qr-code/?';
+        var size = document.getElementById('size').value;
+        var data = document.getElementById('data').value;
+        
+        apiAddress += 'size=' + size + 'x' + size + '&';
+        apiAddress += 'data=' + data;
+        
+        document.getElementById('printQrcode').src = apiAddress;
       }
     </script>
   </head>
@@ -15,7 +23,7 @@
         데이터 <input id="data" type="text" value="https://syasidev.github.io/"></input>
         <button type="button" onclick="qrGene()" style="margin-bottom:20px;">생성</button>
      </div>
-     <div id="result"></div>
+     <img id="printQrcode"></img>
      <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
 </html>
