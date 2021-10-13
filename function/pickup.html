@@ -10,6 +10,11 @@
         document.getElementById("result").innerHTML = "연차내 픽업을 얻을 확률은 " + successRate + "% 입니다";
       }
     </script>
+    <style>
+      .closeBtn{
+        background-color: red; color: white; text-align: center; position: fixed; bottom: 0px; width: 100%;
+      }
+    </style>
   </head>
   <body>
      <h2>픽업계산기</h2>
@@ -21,6 +26,6 @@
         <br>
         <div id="result"></div>
      </div>
-     <div onclick="window.close()">닫기</div>
+     <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
 </html>
