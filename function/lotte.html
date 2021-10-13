@@ -18,7 +18,7 @@
         }
         
         var sortList = quickSort(list);
-        var text;
+        var text = "";
         var color;
         
         for(var j=0; j < sortList.length ; j++){
@@ -34,7 +34,7 @@
               color = 'red';
            }
           
-           text += "<font size='20px' color='" + color + "'>" + sortList[j] + "</font>";
+           text += "<font size='20px' color='" + color + "'>[" + sortList[j] + "]</font> ";
         }
         
         document.getElementById("result").innerHTML = text;
