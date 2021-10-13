@@ -16,18 +16,21 @@
     </script>
     <style>
       .container{
-        display : grid;
-        grid-template : 100px;
         gap: 1px;
       }
       .item{
         color : white;
+        float : left;
+      }
+      .size-mini{
+        width : 100px;
+        height : 100px;
       }
     </style>
   </head>
   <body>
      <div class="container">
-        <div class="item" onclick="popupOpen('pickup',500,300)" style="background-color:#42cef5;">[픽업계산기]</div>
+        <div class="item size-mini" onclick="popupOpen('pickup',500,300)" style="background-color:yellow;">픽업계산기</div>
      </div>
   </body>
 </html>
