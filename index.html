@@ -2,24 +2,20 @@
 <html>
   <head>
     <script>
-      function popupOpen(funcName){
-        var address = "https://syasidev.github.io/function/"+funcName+".html";
-        var option = getOption();
-        window.open(address, funcName, option);
+      function popupOpen(funcName, width, height){
+        window.open("https://syasidev.github.io/function/"+funcName+".html", funcName, getOption(width, height));
       }
       
-      function getOption(){
-         var getWidth = 500;
-         var getHeight = 300;
-         var getLeft = (window.screen.width / 2) - getWidth / 2;
-         var getTop = (window.screen.height / 2) - getHeight;
-         getLeft += window.screenLeft;
+      function getOption(width, height){
+         var left = (window.screen.width / 2) - width / 2;
+         var top = (window.screen.height / 2) - height;
+         left += window.screenLeft;
         
-         return 'width='+getWidth+',height='+getHeight+',left='+getLeft+',top='+getTop;
+         return 'width='+width+',height='+height+',left='+left+',top='+top;
       }
     </script>
   </head>
   <body>
-     <a href="#" onclick="popupOpen('pickup')">[픽업계산기]</a>
+     <a href="#" onclick="popupOpen('pickup',500,300)">[픽업계산기]</a>
   </body>
 </html>
