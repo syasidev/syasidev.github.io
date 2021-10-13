@@ -3,6 +3,7 @@
   <head>
     <link href="/css/style.css" rel="stylesheet">
     <script>
+      var indiFlag = false;
       function qrGene(){
         var apiAddress = 'https://api.qrserver.com/v1/create-qr-code/?';
         var size = document.getElementById('size').value;
@@ -12,6 +13,25 @@
         apiAddress += 'data=' + data;
         
         document.getElementById('printQrcode').src = apiAddress;
+        this.indiFlag = true;
+        startindi();
+      }
+      function startindi(){
+        while(true)
+          if(this.indiFlag){
+             var indi = document.getElementById('indicator');
+             indi.innerHTML = '처리중입니다'
+             if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다.'}, 500);
+             if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다..'}, 1000);
+             if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다...'}, 1500);
+          } else {
+             document.getElementById('indicator').innerHTML = '';
+             break; 
+          }
+        }
+      }
+      function finish(){
+        this.indiFlag = false;
       }
     </script>
   </head>
@@ -23,7 +43,8 @@
         데이터 <input id="data" type="text" value="https://syasidev.github.io/"></input>
         <button type="button" onclick="qrGene()" style="margin-bottom:20px;">생성</button>
      </div>
+     <div id='indicator'></div>
      <img id="printQrcode"></img>
-     <div class="closeBtn" onclick="window.close()">닫기</div>
+     <div class="closeBtn" onclick="window.close()" onload='finish()'>닫기</div>
   </body>
 </html>
