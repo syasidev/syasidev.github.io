@@ -7,6 +7,7 @@
       
        window.open(function(){
           this.status = 'ready';
+          document.getElementById("boxText").innerHTML = '시작';
        });
        
        function btnClick(){
@@ -14,10 +15,13 @@
          
            if(this.status == 'ready'){
               this.status = 'start';
+              boxText.innerHTML = '녹색일때 클릭!';
            } else if(this.status == 'start') {
               this.status = 'finish';
+              boxText.innerHTML = '1ms 입니다';
            } else if(this.status == 'finish') {
               this.status = 'ready';
+              boxText.innerHTML = '시작';
            }
        }
     </script>
@@ -30,7 +34,7 @@
      <h2>반응속도 테스트</h2>
      <hr>
      <div class="box">
-        <div id="boxText" class="box-item" onclick="btnClick()">시작</div>
+        <div id="boxText" class="box-item" onclick="btnClick()"></div>
      </div>
      <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
