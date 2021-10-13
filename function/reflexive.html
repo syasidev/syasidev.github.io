@@ -33,10 +33,11 @@
            }
        }
       function timewaiting(){
-          var randTime = (Math.floor(Math.random() * 5) + 1) * 1000;
-          sleep(randTime);
-          document.getElementById("boxText").style.backgroundColor = '#0ac263';
-          clickFlag = true;
+          var randTime = (Math.floor(Math.random() * 300) + 200) * 10;
+          setTimeout(function() {
+              document.getElementById("boxText").style.backgroundColor = '#0ac263';
+              this.clickFlag = true;
+          }, randTime);
       }
     </script>
     <style>
