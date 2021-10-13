@@ -14,7 +14,6 @@
            if(this.status == 'ready'){
               this.status = 'start';
               boxText.innerHTML = '녹색일때 클릭!';
-              this.startTime = new Date();
               clickFlag = false;
               timewaiting();
            } else if(this.status == 'start') {
@@ -37,6 +36,7 @@
           setTimeout(function() {
               document.getElementById("boxText").style.backgroundColor = '#0ac263';
               this.clickFlag = true;
+              this.startTime = new Date();
           }, randTime);
       }
     </script>
