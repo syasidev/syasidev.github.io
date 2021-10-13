@@ -4,7 +4,17 @@
     <script>
       function popupOpen(funcName){
         var address = "https://syasidev.github.io/function/"+funcName+".html";
-        window.open(address, funcName, "width=600px,height=600px,scrollbars=no");
+        var option = getOption();
+        window.open(address, funcName, option);
+      }
+      
+      function getOption(){
+         var getWidth = 300;
+         var getHeight = 200;
+         var getLeft = (document.body.offsetWidth / 2) - (getWidth / 2);
+         var getTop = (window.screen.height / 2) - (getHeight / 2);
+        
+         return 'width='+getWidth+'px,height='+getHeight+'px,left='+getLeft+'px,top='+getTop+'px';
       }
     </script>
   </head>
