@@ -54,17 +54,22 @@
               }
           }, randTime);
       }
+      function on_key_down(){
+          var keycode = event.keyCode;
+          console.log('key >> ' + keycode);
+      }
     </script>
     <style>
        .box{ text-align: center; display: table; cursor: pointer; width:100%;}
        .box-item{ border: 1px solid black; width:100%; height:150px; color: white; display: table-cell; vertical-align: middle; }
     </style>
   </head>
-  <body>
+  <body onkeydown='on_key_down()'>
      <h2>반응속도 테스트</h2>
      <hr>
      <div class="box">
         <div id="boxText" class="box-item" onclick="btnClick()" style="background-color:#bec944;">시작</div>
+        ※ 스페이스도 됩니다
      </div>
      <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
