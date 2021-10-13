@@ -7,3 +7,4 @@
 .size-big{ width: 200px; height: 200px; }
 
 /* Contents */
+.closeBtn{ background-color: red; color: white; text-align: center; position: fixed; bottom: 0px; width: 100%; cursor: pointer; right: 0px; }
