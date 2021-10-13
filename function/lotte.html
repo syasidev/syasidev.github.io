@@ -18,9 +18,26 @@
         }
         
         var sortList = quickSort(list);
+        var text;
+        var color;
         
+        for(var j=0; i < sortList.length ; j++){
+           if(sortList.[j] < 10){
+              color = 'green';
+           } else if(sortList.[j] < 20){
+              color = 'blue';
+           } else if(sortList.[j] < 30){
+              color = 'purple';
+           } else if(sortList.[j] < 40){
+              color = 'brown';
+           } else {
+              color = 'red';
+           }
+          
+           text += "<font size='20px' color='" + color + "'>";
+        }
         
-        document.getElementById("result").innerHTML = "연차내 픽업을 얻을 확률은 " + successRate + "% 입니다";
+        document.getElementById("result").innerHTML = text;
       }
       
       function quickSort(array) {
@@ -45,10 +62,6 @@
         return quickSort(left).concat(pivot, quickSort(right));
       }
       
-      function giveColor(array){
-         
-        
-      }
     </script>
   </head>
   <body>
