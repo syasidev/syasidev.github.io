@@ -23,6 +23,7 @@
                 boxText.innerHTML = (endTime-startTime)+'ms 입니다!';
               } else {
                 boxText.innerHTML = '일찍 눌렀어요!';
+                clickFlag = true;
               }
               boxText.style.backgroundColor = '#527ede';
            } else if(this.status == 'finish') {
@@ -34,9 +35,11 @@
       function timewaiting(){
           var randTime = (Math.floor(Math.random() * 300) + 200) * 10;
           setTimeout(function() {
-              document.getElementById("boxText").style.backgroundColor = '#0ac263';
-              this.clickFlag = true;
-              this.startTime = new Date();
+              if(this.clickFlag == false){
+                  document.getElementById("boxText").style.backgroundColor = '#0ac263';
+                  this.clickFlag = true;
+                  this.startTime = new Date();
+              }
           }, randTime);
       }
     </script>
