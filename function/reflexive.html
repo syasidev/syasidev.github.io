@@ -6,6 +6,7 @@
        var status = 'ready';
        var startTime;
        var endTime;
+       var clickFlag;
        
        function btnClick(){
            var boxText = document.getElementById("boxText");
@@ -14,13 +15,16 @@
               this.status = 'start';
               boxText.innerHTML = '녹색일때 클릭!';
               this.startTime = new Date();
-             
-             
-              boxText.style.backgroundColor = '#0ac263';
+              clickFlag = false;
+              timewaiting();
            } else if(this.status == 'start') {
               this.endTime = new Date();
               this.status = 'finish';
-              boxText.innerHTML = (endTime-startTime)+'ms 입니다!';
+              if(clickFlag){
+                boxText.innerHTML = (endTime-startTime)+'ms 입니다!';
+              } else {
+                boxText.innerHTML = '일찍 눌렀어요!';
+              }
               boxText.style.backgroundColor = '#527ede';
            } else if(this.status == 'finish') {
               this.status = 'ready';
@@ -28,6 +32,12 @@
               boxText.style.backgroundColor = '#bec944';
            }
        }
+      function timewaiting(){
+          var randTime = (Math.floor(Math.random() * 5) + 1) * 1000;
+          sleep(randTime);
+          document.getElementById("boxText").style.backgroundColor = '#0ac263';
+          clickFlag = true;
+      }
     </script>
     <style>
        .box{ text-align: center; display: table; cursor: pointer; width:100%;}
