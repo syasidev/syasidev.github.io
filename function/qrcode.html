@@ -17,21 +17,16 @@
         startindi();
       }
       function startindi(){
-        while(true){
-          if(this.indiFlag){
-             var indi = document.getElementById('indicator');
-             indi.innerHTML = '처리중입니다'
+        var inter = setInterval(function(){
+             if(this.indiFlag) = '처리중입니다'
              if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다.'}, 500);
              if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다..'}, 1000);
              if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다...'}, 1500);
-          } else {
-             document.getElementById('indicator').innerHTML = '';
-             break; 
-          }
-        }
+        },2000);
       }
       function finish(){
         this.indiFlag = false;
+        indi.innerHTML = '';
       }
     </script>
   </head>
