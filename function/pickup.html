@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="/css/style.css" rel="stylesheet">
     <script>
       function pickCalc(){
         var pickupRate = document.getElementById("pickupRate").value;
@@ -10,11 +11,6 @@
         document.getElementById("result").innerHTML = "연차내 픽업을 얻을 확률은 " + successRate + "% 입니다";
       }
     </script>
-    <style>
-      .closeBtn{
-        background-color: red; color: white; text-align: center; position: fixed; bottom: 0px; width: 100%; cursor: pointer;
-      }
-    </style>
   </head>
   <body>
      <h2>픽업계산기</h2>
