@@ -13,8 +13,10 @@
            if(this.status == 'ready'){
               this.status = 'start';
               boxText.innerHTML = '녹색일때 클릭!';
-              boxText.style.backgroundColor = '#0ac263';
               this.startTime = new Date();
+             
+             
+              boxText.style.backgroundColor = '#0ac263';
            } else if(this.status == 'start') {
               this.endTime = new Date();
               this.status = 'finish';
