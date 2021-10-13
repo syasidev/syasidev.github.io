@@ -17,7 +17,7 @@
         startindi();
       }
       function startindi(){
-        while(true)
+        while(true){
           if(this.indiFlag){
              var indi = document.getElementById('indicator');
              indi.innerHTML = '처리중입니다'
@@ -28,7 +28,7 @@
              document.getElementById('indicator').innerHTML = '';
              break; 
           }
-        
+        }
       }
       function finish(){
         this.indiFlag = false;
