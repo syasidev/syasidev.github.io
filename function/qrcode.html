@@ -3,7 +3,6 @@
   <head>
     <link href="/css/style.css" rel="stylesheet">
     <script>
-      var indiFlag = false;
       function qrGene(){
         var apiAddress = 'https://api.qrserver.com/v1/create-qr-code/?';
         var size = document.getElementById('size').value;
@@ -13,20 +12,6 @@
         apiAddress += 'data=' + data;
         
         document.getElementById('printQrcode').src = apiAddress;
-        this.indiFlag = true;
-        startindi();
-      }
-      function startindi(){
-        var inter = setInterval(function(){
-             if(this.indiFlag) indi.innerHTML = '처리중입니다';
-             if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다.'}, 500);
-             if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다..'}, 1000);
-             if(this.indiFlag) setTimeout(function(){indi.innerHTML = '처리중입니다...'}, 1500);
-        },2000);
-      }
-      function finish(){
-        this.indiFlag = false;
-        indi.innerHTML = '';
       }
     </script>
   </head>
