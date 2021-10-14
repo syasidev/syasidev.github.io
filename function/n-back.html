@@ -3,13 +3,22 @@
   <head>
     <link href="/css/style.css" rel="stylesheet">
     <script>
-
+      function startGame(){
+         var totalCount = document.getElementById("totalCount");
+         var nCount = document.getElementById("nCount");
+         
+         
+      }
     </script>
   </head>
   <body>
      <h2>N-back 트레이닝</h2>
      <hr>
-
+     <div>
+       Setting 총 갯수 <input id="totalCount" type="number" value="10"></input>
+       N <input id="nCount" type="number" value="2"></input>
+       <button type="button" onclick="startGame">Start</button>
+     </div>
      <div class="closeBtn" onclick="window.close()" onload='finish()'>닫기</div>
   </body>
 </html>
