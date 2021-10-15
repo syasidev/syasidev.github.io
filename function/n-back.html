@@ -3,11 +3,26 @@
   <head>
     <link href="/css/style.css" rel="stylesheet">
     <script>
+      var nCount = 0;
+      var cursor = 0;
+      var numList = new Array();
+      var selectList = new Array();
+      
       function startGame(){
          var totalCount = document.getElementById("totalCount");
-         var nCount = document.getElementById("nCount");
+         this.nCount = document.getElementById("nCount");
          
-         
+         this.numList = new Array();
+         for(var i=0; i<totalCount; i++){
+             numList.push(Math.floor(Math.random() * 3) + 1);
+         }
+        
+        this.cursor = 0;
+      }
+      function areaClick(someArea){
+        if(this.selectList.length < nCount){
+          
+        }
       }
     </script>
   </head>
@@ -17,8 +32,15 @@
      <div>
        Setting 총 갯수 <input id="totalCount" type="number" value="10"></input>
        N <input id="nCount" type="number" value="2"></input>
-       <button type="button" onclick="startGame">Start</button>
+       <button type="button" onclick="startGame()">Start</button>
      </div>
+     <table>
+       <tr>
+         <td id="showScreen"></td>
+         <td id="leftArea" onclick="areaClick('left')"></td>
+         <td id="rightArea" onclick="areaClick('right')"></td>
+       <tr>
+     </table>
      <div class="closeBtn" onclick="window.close()" onload='finish()'>닫기</div>
   </body>
 </html>
