@@ -15,15 +15,15 @@
      <h2>픽업계산기</h2>
      <hr>
      <div>
-        변환전
+        변환전 (Raw Data)
         <br>
-        <input type="text" id="raw-text"/>
+        <textarea id="raw-text"></textarea>
+        변환후 (Trans Data)
         <br>
-        변환후
-        <input type="text" id="trans-text" readonly="readonly"/>
+        <textarea id="trans-text"></textarea>
         <br>
-        <input type="button" onclick="fnEncode" value="Encode"/>
-        <input type="button" onclick="fnDecode" value="Decode"/>
+        <input type="button" onclick="fnEncode()" value="Encode"/>
+        <input type="button" onclick="fnDecode()" value="Decode"/>
      </div>
      <div class="closeBtn" onclick="window.close()">닫기</div>
   </body>
