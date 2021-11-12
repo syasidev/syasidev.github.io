@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet">
+    <script>
+      function fnEncode(){
+        document.getElementById('trans-text').value = encodeURI(document.getElementById('raw-text').value);
+      }
+      function fnDecode(){
+        document.getElementById('trans-text').value = decodeURI(document.getElementById('raw-text').value);
+      }
+    </script>
+  </head>
+  <body>
+     <h2>픽업계산기</h2>
+     <hr>
+     <div>
+        변환전
+        <br>
+        <input type="text" id="raw-text"/>
+        <br>
+        변환후
+        <input type="text" id="trans-text" readonly="readonly"/>
+        <br>
+        <input type="button" onclick="fnEncode" value="Encode"/>
+        <input type="button" onclick="fnDecode" value="Decode"/>
+     </div>
+     <div class="closeBtn" onclick="window.close()">닫기</div>
+  </body>
+</html>
